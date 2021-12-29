@@ -1,27 +1,15 @@
-import React,{useState} from 'react'
+import React from "react";
+import UpdatedComponent from "./withCounter";
 
-function Timer() {
- 
-  const [count,setcount] = useState(0);
-
-  return (
-    <div>
-      <p>
-        {count}
-      </p>
-      <button onClick={()=>{
-        setcount(count+1)
-      }}>
-        CLick me to add
-      </button>
-
-      <button onClick={() => {
-        setcount(count-1)
-      }}>
-        click me to delete
-      </button>
-    </div>
-  )
+class ClickCounter extends React.Component{
+  
+    render(){
+      const { count , handleCount } = this.props
+    return(
+      <div>
+          <button onClick={handleCount}>clicked {count} times</button>
+      </div>
+    )
+  }
 }
-
-export default Timer;
+export default UpdatedComponent(ClickCounter);
