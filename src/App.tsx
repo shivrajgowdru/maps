@@ -9,7 +9,7 @@ import CounterFinal from './Counterfinal';
 function App() {
   return (
     <div>
-      {/* <Maps /> */}
+      <Maps />
       <ClickCounter />
       <HoverCounter />
       <CounterFinal />
